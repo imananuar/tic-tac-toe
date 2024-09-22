@@ -113,14 +113,15 @@ int main()
 		}
 		board.changeBoard(x, player_move, "player");
 		board.deleteBoardPosition(boardPosition, player_move);
-		// winning condition for player
-
 
 		std::string computer_move = computerGenerator(boardPosition);
 		board.changeBoard(x, computer_move, "computer");
 		board.deleteBoardPosition(boardPosition, computer_move);
-		// Winning condition for computer
-		
+
+		for (int i = 0; i < boardPosition.size(); i++) {
+			cout << boardPosition[i] << endl;
+		}
+		cout << endl;
 	}
 	return 0;
 }
